@@ -1,3 +1,5 @@
+
+   
 name: Build and deploy docker image to Heroku
 
 on:
@@ -21,4 +23,6 @@ jobs:
     - name: Push to container registry
       run: docker push registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
     - name: Deploy
-      run: heroku container:release web ${{ secrets.HEROKU_APP_NAME }}
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: heroku container:release web -a ${{ secrets.HEROKU_APP_NAME }}
