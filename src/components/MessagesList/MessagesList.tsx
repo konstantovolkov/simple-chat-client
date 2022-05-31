@@ -70,4 +70,6 @@ const StyledTransitionGroup = styled(TransitionGroup as any)`
 
   width: 100%;
   grid-row-gap: 10px;
+
+  overflow: auto;
 ` as unknown as typeof TransitionGroup;
