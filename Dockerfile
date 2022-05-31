@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 COPY tsconfig.json ./
 
-RUN npm ci --production
+RUN npm ci
 ENV NODE_ENV=production
 COPY . ./
 RUN npm run build
