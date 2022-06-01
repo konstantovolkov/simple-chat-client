@@ -67,7 +67,8 @@ const MessageWithTransitionStyle = styled(Message)<MessageWithTransitionStylePro
 const StyledTransitionGroup = styled(TransitionGroup as any)`
   display: flex;
   flex-direction: column;
-
+  
+  height: 100%;
   width: 100%;
   grid-row-gap: 10px;
 
